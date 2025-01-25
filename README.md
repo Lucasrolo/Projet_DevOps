@@ -9,177 +9,139 @@
 ## 1. Introduction
 
 ### Context
-In today's fast-paced world, maintaining New Year's resolutions has become increasingly challenging. Many people start the year with good intentions but struggle to maintain their commitments beyond the first month. This project addresses this common problem by creating an automated system that provides consistent motivation and tracking for personal goals throughout the year.
+People often make New Year's resolutions but struggle to maintain them beyond the first month. This project aims to solve this common challenge by creating an automated reminder and tracking system that provides consistent motivation throughout the year. When someone receives daily motivation and tracking, they are more likely to achieve their goals.
 
 ### Objectives
-- Create an automated reminder system for daily and weekly goals
-- Implement a progressive achievement system with intermediate objectives
-- Develop a user-friendly mobile interface connected to smart watches
-- Build a supportive network through challenges and competitions
-- Provide timely notifications and congratulatory messages
+- Create an automated reminder system for monthly resolutions
+- Provide timely notifications based on the date
+- Track progress with weekly check-ins
+- Offer encouragement and suggestions for each month's theme
 
-## 2. Architecture and Workflow
+## 2. Project Structure
 
-### Architecture Diagram
+### Architecture
 ```
-[Mobile App] <-> [Backend API] <-> [Database]
-     ↓              ↓
-[Smart Watch]  [Notification System]
+project/
+├── Jenkinsfile          # CI/CD pipeline configuration
+└── README.md            # Project documentation
 ```
 
-### General Workflow
-1. User sets monthly and weekly goals
-2. System sends automated reminders
-3. Progress tracking and milestone achievements
-4. Social networking and challenge participation
-5. Performance analytics and progress reports
+### Pipeline Stages
+1. **Date Validation**
+   - Validates input date
+   - Extracts month and day information
 
-## 3. Tools and Technologies
+2. **Monthly Resolution Stages**
+   - January: Digital Diary
+   - February: Home Improvement
+   - March: Self-Care
+   - April: Kindness
+   - May: New Experiences
+   - June: Family Time
+   [Additional months to be implemented]
 
-### Tools Used
-- **Backend**: Python Flask
-- **Frontend**: React Native
-- **Database**: MongoDB
-- **CI/CD**: Jenkins
-- **Testing**: PyTest
-- **Notification System**: Custom Python scheduler
+3. **Notification Summary**
+   - Provides daily resolution summary
+   - Tracks monthly progress
 
-## 4. Monthly Objectives and Features
+## 3. Monthly Resolutions
 
 ### January: Digital Diary
-- Daily 7 PM notification for journal entries
-- Weekly Sunday reflection prompts at 6 PM
-- Progress tracking and mood analysis
-- Objective tracking:
-  1. Journal setup by first week
-  2. Weekly reflection entries
+- **First Week Goal**: Journal setup
+- **Daily Task**: Write daily reflections
+- **Weekly Check**: Sunday reflection and goal tracking
 
-### February: Home Improvement
-- Bi-weekly progress notifications
-- Room improvement suggestions
-- Before/after photo tracking
-- Objectives:
-  1. Room selection by mid-February
-  2. Implementation of changes
+### February: Home Redecoration
+- **First Half**: Room selection and planning
+- **Second Half**: Implementation of changes
+- **Notifications**: Different messages before/after day 15
 
-### March: Self-Care Routine
-- Daily morning wellness reminders at 7 AM
-- Weekly progress tracking
-- Habit formation monitoring
-- Objectives:
-  1. Healthy habit selection
-  2. Weekly routine adjustments
+### March: Self-Care Journey
+- **Daily Reminder**: Morning wellness routine
+- **Weekly Check**: Routine adjustment and progress review
+- **Focus**: Health habit formation
 
 ### April: Kindness Challenge
-- Daily 7 AM kindness reminders
-- Weekly suggestion list (Sundays at 10 AM)
-- Kind gesture tracking
-- Objective: Daily kind gesture completion
+- **Daily Task**: Perform acts of kindness
+- **Weekly Suggestions**: List of kind gestures
+- **Tracking**: Weekly accomplishment review
 
-### May: Fitness Challenge
-- Daily 7 AM fitness reminders
-- Weekly progress tracking
-- Workout routine suggestions
-- Objectives:
-  1. Workout routine setup by first week
-  2. Weekly workout completion
+### May: New Experiences
+- **Early Month**: Adventure planning
+- **Weekly Ideas**: New activity suggestions
+- **Focus**: Stepping out of comfort zone
 
-### June: Mindfulness Challenge
-- Daily 7 AM mindfulness reminders
-- Weekly progress tracking
-- Mindfulness exercise suggestions
-- Objectives:
-  1. Mindfulness exercise selection
-  2. Weekly mindfulness practice
+### June: Family Connections
+- **Daily Focus**: Family time planning
+- **Weekly Activities**: Family event suggestions
+- **Goal**: Strengthening family bonds
 
-### July: Productivity Challenge
-- Daily 7 AM productivity reminders
-- Weekly progress tracking
-- Task management suggestions
-- Objectives:
-  1. Task management setup by first week
-  2. Weekly task completion
+[Additional months to be detailed...]
 
-### August: Creative Challenge
-- Daily 7 AM creative reminders
-- Weekly progress tracking
-- Creative project suggestions
-- Objectives:
-  1. Creative project selection
-  2. Weekly creative progress
+## 4. Implementation Details
 
-### September: Financial Challenge
-- Daily 7 AM financial reminders
-- Weekly progress tracking
-- Budgeting suggestions
-- Objectives:
-  1. Budget setup by first week
-  2. Weekly financial tracking
+### Jenkins Pipeline Features
+- **Date Parameter**: Takes YYYY-MM-DD format
+- **Conditional Execution**: Only runs relevant monthly stage
+- **Progress Tracking**: Different messages based on day of month
+- **Weekly Checks**: Special messages every 7 days
 
-### October: Social Challenge
-- Daily 7 AM social reminders
-- Weekly progress tracking
-- Social activity suggestions
-- Objectives:
-  1. Social activity selection
-  2. Weekly social engagement
+### Notification Types
+1. **Daily Reminders**
+   - Morning motivation
+   - Task reminders
+   - Progress checks
 
-### November: Gratitude Challenge
-- Daily 7 AM gratitude reminders
-- Weekly progress tracking
-- Gratitude journaling suggestions
-- Objectives:
-  1. Gratitude journal setup by first week
-  2. Weekly gratitude reflection
+2. **Weekly Check-ins**
+   - Progress summary
+   - New suggestions
+   - Achievement celebration
 
-### December: Reflection Challenge
-- Daily 7 AM reflection reminders
-- Weekly progress tracking
-- Year-end reflection prompts
-- Objectives:
-  1. Year-end reflection setup by first week
-  2. Weekly reflection and planning
+3. **Monthly Progress**
+   - Mid-month motivation
+   - End-of-month completion push
 
-## 5. Implementation Details
+## 5. Usage Instructions
 
-### Notification System
-- Time-based triggers for different activities
-- Smart notification scheduling
-- Progress-based encouragement messages
-- Challenge completion celebrations
+### Running the Pipeline
+1. Open Jenkins dashboard
+2. Select the Resolution Tracker pipeline
+3. Click "Build with Parameters"
+4. Enter current date (YYYY-MM-DD)
+5. View console output for notifications
 
-### Progress Tracking
-- Daily and weekly achievement logging
-- Visual progress indicators
-- Milestone celebrations
+### Example Input
+```
+CURRENT_DATE: 2025-01-25
+```
+
+### Expected Output
+- Monthly theme notification
+- Daily task reminder
+- Weekly check-in (if applicable)
+- Progress status based on date
+
+## 6. Future Improvements
+
+### Planned Enhancements
+- Implementation of remaining months (July-December)
+- Additional weekly suggestions
+- More detailed progress tracking
+- Integration with notification systems
+
+### Potential Features
+- Mobile app integration
+- Smart device connectivity
 - Social sharing capabilities
+- Achievement badges
 
-## 6. Conclusion
+## 7. Contributing
+To contribute to this project:
+1. Fork the repository
+2. Create a feature branch
+3. Submit a pull request
+4. Ensure pipeline tests pass
 
-### Current Benefits
-- Automated motivation system
-- Structured goal progression
-- Community support network
-- Measurable achievement tracking
-
-### Future Improvements
-- AI-powered personalized suggestions
-- Enhanced social features
-- Integration with more fitness devices
-- Gamification elements
-
-## 7. Appendices
-
-### Project Structure
-```
-├── src/
-│   ├── backend/
-│   ├── mobile_app/
-│   └── notification_service/
-├── tests/
-└── jenkins/
-```
-
-### Links
-- GitHub Repository: [URL]
-- Documentation: [URL]
+## 8. Contact
+For questions or suggestions, contact team members:
+- [Team member contact information]
