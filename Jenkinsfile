@@ -135,6 +135,107 @@ pipeline {
                 }
             }
         }
+        stage('July - Summer Festivals') {
+            when { expression { return params.CURRENT_DATE.startsWith('2025-07') } }
+            steps {
+                script {
+                    echo "=== July: Summer Festivals and Dancing ==="
+                    sleep 2
+
+                    def (year, month, day) = params.CURRENT_DATE.split('-')
+                    echo "Daily Reminder: Enjoy summer festivals! Find a concert to attend, dance under the stars, and sing along to live hits."
+
+                    if (day.toInteger() % 7 == 0) {
+                        echo "Weekly Festival Reminder: Plan an evening with friends and enjoy the summer vibes!"
+                    }
+                }
+            }
+        }
+
+        stage('August - Beach Night') {
+            when { expression { return params.CURRENT_DATE.startsWith('2025-08') } }
+            steps {
+                script {
+                    echo "=== August: Sleep a Night on the Beach ==="
+                    sleep 2
+
+                    def (year, month, day) = params.CURRENT_DATE.split('-')
+                    echo "Daily Reminder: Plan a night on the beach. Take a blanket, enjoy the stars, and let the sunrise greet you."
+
+                    if (day.toInteger() % 7 == 0) {
+                        echo "Weekly Beach Night Tip: Don’t forget to take a night bath and fully enjoy the magical atmosphere."
+                    }
+                }
+            }
+        }
+
+        stage('September - Discover the World') {
+            when { expression { return params.CURRENT_DATE.startsWith('2025-09') } }
+            steps {
+                script {
+                    echo "=== September: Explore New Horizons ==="
+                    sleep 2
+
+                    def (year, month, day) = params.CURRENT_DATE.split('-')
+                    echo "Daily Reminder: Step out of your comfort zone and explore new places or hiking trails."
+
+                    if (day.toInteger() % 7 == 0) {
+                        echo "Weekly Adventure Reminder: Have you planned a hike or an adventure for this weekend?"
+                    }
+                }
+            }
+        }
+
+        stage('October - Study') {
+            when { expression { return params.CURRENT_DATE.startsWith('2025-10') } }
+            steps {
+                script {
+                    echo "=== October: Learn Something New ==="
+                    sleep 2
+
+                    def (year, month, day) = params.CURRENT_DATE.split('-')
+                    echo "Daily Reminder: Enroll in an online course or dive into a subject that fascinates you."
+
+                    if (day.toInteger() % 7 == 0) {
+                        echo "Weekly Learning Check: What new skill or knowledge have you gained this week?"
+                    }
+                }
+            }
+        }
+
+        stage('November - Play an Instrument') {
+            when { expression { return params.CURRENT_DATE.startsWith('2025-11') } }
+            steps {
+                script {
+                    echo "=== November: Learn an Instrument ==="
+                    sleep 2
+
+                    def (year, month, day) = params.CURRENT_DATE.split('-')
+                    echo "Daily Reminder: Practice your instrument and enjoy making music!"
+
+                    if (day.toInteger() % 7 == 0) {
+                        echo "Weekly Music Progress: Have you learned a new song or chord this week?"
+                    }
+                }
+            }
+        }
+
+        stage('December - Conscious Breathing') {
+            when { expression { return params.CURRENT_DATE.startsWith('2025-12') } }
+            steps {
+                script {
+                    echo "=== December: Breathe Consciously ==="
+                    sleep 2
+
+                    def (year, month, day) = params.CURRENT_DATE.split('-')
+                    echo "Daily Reminder: Take 5 minutes to focus on your breathing and ground yourself in the present moment."
+
+                    if (day.toInteger() % 7 == 0) {
+                        echo "Weekly Breathing Reflection: Are you feeling more grounded and present this week?"
+                    }
+                }
+            }
+        }
         
         stage('Notification Summary') {
             steps {
